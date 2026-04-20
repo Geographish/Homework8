@@ -48,8 +48,10 @@ Homework8/
 
 - This notebook is set up for ARIA v5 data analysis
 - Placeholder cells are provided for customization based on specific data requirements
-- The analysis focuses on the Mataian area
+- The analysis focuses on the Mataian area.
 
 ## Author
 
 Remote Sensing & Geospatial Information Analysis
+
+
