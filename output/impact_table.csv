@@ -1,0 +1,25 @@
+Asset,Type,Location,W4 Terrain Risk,W7 Centrality Rank,Barrier Lake Hit (Y/N),Landslide Hit (Y/N),Debris Flow Hit (Y/N),Notes
+光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,1,N,Y,N,Hit by disaster
+光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,3,N,Y,N,Hit by disaster
+光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,4,N,Y,N,Hit by disaster
+光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,5,N,Y,N,Hit by disaster
+光復自強外役監獄,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+大興國小,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+大興活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+馬佛活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+砂荖活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+光復鄉立托兒所,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+大同活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+光復鄉公所,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+光復國中,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+Guangfu_Station,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+Guangfu_Elementary,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+Guangfu_Township_Office,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+Foxu_Debris_Zone,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,2,N,N,N,Safe
+花東山琉璃禪寺,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+大富國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+西南活動中心,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+太巴塱國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+東富國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+Mataian_Hwy9_Bridge,W8 Guangfu Overlay,Guangfu Township,—,—,N,N,N,Safe
