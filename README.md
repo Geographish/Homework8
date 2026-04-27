@@ -1,58 +1,36 @@
-# ARIA v5.0 — 馬太鞍三幕稽核系統 (The Matai'an Three-Act Auditor)
+# ARIA v5.0: The Matai'an Three-Act Auditor (馬太鞍三幕稽核系統)
 
-本專案為 ARIA 系統的第 8 週擴充模組。透過 Microsoft Planetary Computer STAC API 串流 Sentinel-2 L2A 衛星影像，我們針對 2025 年馬太鞍溪堰塞湖事件進行了完整生命週期（災前、災中、災後）的光學鑑識稽核。
-
-本系統成功萃取出三大災害遮罩（堰塞湖、崩塌源頭、下游土石流），並與 W7 瓶頸節點及 W8 光復鄉基礎設施圖層進行空間疊合，產出最終的「現場目擊影響評估表」。
-
----
-
-## 🛰️ 1. 三幕場景選擇 (Reproducible Scene IDs)
-
-經過嚴格的 TCI 視覺品管，我們挑選出涵蓋事件完整生命週期的三張核心 Sentinel-2 L2A 影像。這三幕完美避開了季風雲層的干擾，確保了馬太鞍河谷上空的清晰度：
-
-* **Act 1: Pre (災前 - 原始森林)**
-    * **Date**: 2025-06-15 (Cloud Cover: 8.5%)
-    * **Item ID**: `S2A_MSIL2A_20250615T023141_R046_T51QUG_20250615T070417`
-* **Act 2: Mid (災中 - 堰塞湖形成，86公頃峰值)**
-    * **Date**: 2025-09-11 (Cloud Cover: 13.5%)
-    * **Item ID**: `S2C_MSIL2A_20250911T022551_R046_T51QUG_20250911T055914`
-* **Act 3: Post (災後 - 潰堤與下游土石流)**
-    * **Date**: 2025-10-16 (Cloud Cover: 2.5%)
-    * **Item ID**: `S2B_MSIL2A_20251016T022559_R046_T51QUG_20251016T042804`
+## 1. STAC 影像來源 (Reproducible Scene IDs)
+* **Pre (災前)**: `S2A_MSIL2A_20250615T023141_R046_T51QUG_20250615T070417`
+* **Mid (災中/堰塞湖)**: `S2C_MSIL2A_20250911T022551_R046_T51QUG_20250911T055914`
+* **Post (災後/潰決)**: `S2B_MSIL2A_20251016T022559_R046_T51QUG_20251016T042804`
 
 ---
 
-## 🛑 2. 覆蓋範圍落差分析 (Coverage Gap Analysis)
+## 2. AI 顧問營運簡報 (Generated via Groq API LLaMA-3.3)
+**營運簡報**
 
-從最終生成的 `impact_table.csv` 可以觀察到一個嚴重的系統盲點：既有的 ARIA 災前預警模型未能發揮預期作用。
+**一、 三幕時間軸確認：衛星影像證明了什麼**
+根據 ARIA v5.0 的三幕時間軸分析，衛星影像證明了 Matai'an Creek barrier lake 事件的前、中、後三個階段。Act 1 顯示了森林茂盛的 Matai'an 谷地，沒有湖泊的存在。Act 2 顯示了 barrier lake 的形成，而 Act 3 顯示了湖泊的排空和山體滑坡的源頭驗證。
 
-我們針對 W7 瓶頸節點與 W8 光復鄉套疊節點進行交集運算後發現，災難衝擊（土石流掩埋）集中於光復鄉及萬榮鄉周邊。若我們將資源與預防性撤離計畫僅侷限於都會區，將導致山區聚落與偏鄉在面臨複合型災害（如崩塌引發堰塞湖再導致下游洪患）時完全失去預警保護。
+**二、 預警窗口期 (Jul 21 to Sep 23, 64 days)：如果 ARIA 當時有上線，能提供什麼警告**
+如果 ARIA v5.0 當時已經上線，則可以在 64 天的預警窗口期內提供警告，幫助我們提前預防和應對災害。這個預警窗口期可以讓我們進行搶險和疏散工作，減少災害的影響。
 
-**建議處置：** 縣政府應立即擴展 ARIA 的建模範圍，將全縣的河系、山區潛勢溪流與下游鄉鎮（特別是光復鄉）全面納入基礎設施資料庫中，並建立以流域為單位的上下游連動預警機制。
+**三、 覆蓋範圍落差 (Coverage Gap)：為什麼 W3/W7 錯失了光復鄉？我們該如何改進？**
+根據 ARIA CHAIN SUMMARY，W3 和 W7 分析了 42 個花蓮縣的避難所和 5 個瓶頸，但卻錯失了光復鄉。這個覆蓋範圍落差可能是由於資料不足或分析方法的局限性引起的。為了改進，我們需要收集更多的資料和優化分析方法，確保所有地區都能受到有效的覆蓋。
 
----
+**四、 未來 24 小時命令：包含優先搶通、收容所補給、無人機(UAV)任務**
+根據分析結果，我們需要優先搶通受災地區的交通路線，補給收容所的物資，並使用無人機進行搜索和救援工作。這些任務需要在未來 24 小時內完成，以確保受災民眾的安全和福祉。
 
-## 🛠️ 3. AI 診斷日誌 (AI Diagnostic Log)
-
-在建構 ARIA v5.0 的過程中，我們遭遇並排除了以下技術挑戰：
-
-1.  **影像載入防護機制 (`DecompressionBombWarning`)**
-    * **問題**：在透過 PIL 擷取 Sentinel-2 TCI 縮圖時，因原始圖磚高達 1.2 億畫素，觸發了 Python 影像處理庫的解壓縮炸彈安全限制，導致無法顯示預覽圖。
-    * **解法**：在腳本頂端配置 `Image.MAX_IMAGE_PIXELS = None` 解除限制，並改用 STAC 提供的 `"rendered_preview"` 資產取代完整 `"visual"` 串流，將預覽載入時間從數分鐘縮短至 3 秒內。
-2.  **堰塞湖零偵測 (Empty Barrier Lake Mask)**
-    * **問題**：初次生成 C1 堰塞湖遮罩時，回傳的像素總數為 0，整張圖表呈現空白。
-    * **解法**：重新審視物理參數，確認災中 (Mid) 的堰塞湖水體夾帶大量崩塌泥沙，屬**高濁度水體**。將 `nir_mid` 閾值從常規的 0.15 放寬至 0.18 後，成功捕捉到位於萬榮上游的湖泊範圍。同時，將寫死的 X 座標空間閘道，改為自動抓取影像 `x_min` 與 `x_max` 動態計算邊界比例（35%），消除了人為寫入固定座標帶來的裁切誤差。
-3.  **JSON 隱形字元報錯 (`ValueError: Expected object or value`)**
-    * **問題**：在讀取 W7 (`top5_bottleneck_coordinates.json`) 時，GeoPandas 與 Pandas 皆拒絕解析，顯示格式錯誤。以純文字模式檢驗後，發現檔案第一行包含了隱藏的 UTF-8 BOM (`\ufeff`) 標記。
-    * **解法**：捨棄常規讀取方式，改用原生的 `open(..., encoding="utf-8-sig")` 強制忽略 BOM 字元，再轉換回 Pandas DataFrame 與 GeoDataFrame，並將 CRS 從原生的 EPSG:3826 轉換至目標 EPSG:32651，順利完成空間疊合。
+**五、 模型改進建議：提出一個具體建議來擴展 ARIA 系統**
+為了擴展 ARIA 系統，我們提出以下建議：增加更多的資料來源，例如社交媒體和感測器資料，來提高分析的準確性和覆蓋範圍。同時，需要優化分析方法，例如使用機器學習算法，來提高預警的準確性和時效性。這些改進可以幫助我們更好地預防和應對災害，保護民眾的生命和財產。
 
 ---
 
-## 📂 4. 輸出檔案結構
-
-執行 `ARIA_v5_mataian.ipynb` 後，系統會於 `output/` 目錄生成以下核心檔案：
-
-* `change_metrics.png`: 四項變遷指標之視覺化。
-* `three_masks.png` / `three_masks_fixed.png`: 堰塞湖、崩塌源、土石流之二元遮罩結果。
-* `mataian_detections.gpkg`: 包含上述三大災害多邊形的 GeoPackage 向量圖層。
-* `impact_table.csv`: 空間交集後的最終現場目擊影響評估表。
+## 3. AI 診斷日誌 (AI Diagnostic Log)
+* **問題 1：STAC API 伺服器連線逾時**
+  * **狀況**：在執行 `catalog.search` 檢索影像時，頻繁遭遇 `APIError: The request exceeded the maximum allowed time`。
+  * **解法**：我實作了「指數退避重試機制 (Exponential Backoff Retry)」，透過 `try-except` 捕獲錯誤並搭配時間延遲重試，成功解決 STAC 伺服器不穩定的問題。
+* **問題 2：LLM Token 溢位與偽陽性雜訊處理**
+  * **狀況**：最初模型將光復鄉平地的裸露稻田全數誤判為崩塌源，導致上千個雜訊節點，且未過濾的 `impact_table` 直接導致 Groq API 發生 `BadRequestError` (Token 超載)。
+  * **解法**：首先，我引入了**空間閘道 (Spatial Gate)** (`pre.x < gate_x_debris`) 將崩塌偵測嚴格限制於西側高山區域。接著，在傳遞給 LLM 時，使用 Pandas 過濾邏輯 (`impact_table[impact_table["Notes"] != "outside event area"]`) 僅擷取受災設施名單，成功完成輕量化的 AI 報告自動生成。

@@ -1,25 +1,55 @@
 Asset,Type,Location,W4 Terrain Risk,W7 Centrality Rank,Barrier Lake Hit (Y/N),Landslide Hit (Y/N),Debris Flow Hit (Y/N),Notes
-光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,1,N,Y,N,Hit by disaster
-光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,3,N,Y,N,Hit by disaster
-光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,4,N,Y,N,Hit by disaster
-光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,5,N,Y,N,Hit by disaster
-光復自強外役監獄,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-大興國小,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-大興活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-馬佛活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-砂荖活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-光復鄉立托兒所,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-大同活動中心,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-光復鄉公所,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
-光復國中,W3 Shelter,Guangfu Township,—,—,N,Y,N,Hit by disaster
+光復鄉立托兒所,W7 Bottleneck,Wanrong / Guangfu,高風險,1,N,Y,N,Hit
+光復鄉立托兒所,W7 Bottleneck,Wanrong / Guangfu,高風險,2,N,Y,N,Hit
+光復鄉立托兒所,W7 Bottleneck,Wanrong / Guangfu,高風險,3,N,Y,N,Hit
+光復鄉立托兒所,W7 Bottleneck,Wanrong / Guangfu,高風險,4,N,Y,N,Hit
+光復鄉立托兒所,W7 Bottleneck,Wanrong / Guangfu,高風險,5,N,Y,N,Hit
+光復自強外役監獄,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+大富國小,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+大興國小,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+大興活動中心,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+馬佛活動中心,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+砂荖活動中心,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+光復鄉立托兒所,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+西南活動中心,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+太巴塱國小,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+大同活動中心,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+光復鄉公所,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+光復國中,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
+東富國小,W3 Shelter,花蓮縣光復鄉,—,—,N,Y,N,Hit
 Guangfu_Station,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
 Guangfu_Elementary,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
 Guangfu_Township_Office,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
 Foxu_Debris_Zone,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
-光復鄉立托兒所,W7 Bottleneck,Guangfu Township,高風險,2,N,N,N,Safe
-花東山琉璃禪寺,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
-大富國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
-西南活動中心,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
-太巴塱國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
-東富國小,W3 Shelter,Guangfu Township,—,—,N,N,N,Safe
+Guangfu Sugar Factory,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+Mataian River Bridge,W8 Guangfu Overlay,Guangfu Township,—,—,N,Y,N,Buried in debris/impacted
+花東山琉璃禪寺,W3 Shelter,花蓮縣光復鄉,—,—,N,N,N,outside event area
+主農社區活動中心,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+中正國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+中原國小文中三國中預定地,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮城隍廟香客大樓,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+忠孝國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+主權社區活動中心,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+中正體育館,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+國風國中,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+明義國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮市公所,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+國立花蓮農業職業學校,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮高商,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+南美崙營區,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+中華國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+鑄強國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+明廉國小,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+"慈濟大學附設國民中學,小學",W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+美崙國中,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+自強國中,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮高工,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+慈濟大學人文社會學院,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+私立四維高級中學,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+行政院國軍退除役官兵輔導委員會花,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+民孝社區活動中心,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+大陳二村活動中心,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮縣立體育場,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+花蓮港天宮,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
+國福社區活動中心,W3 Shelter,花蓮縣花蓮市,—,—,N,N,N,outside event area
 Mataian_Hwy9_Bridge,W8 Guangfu Overlay,Guangfu Township,—,—,N,N,N,Safe
